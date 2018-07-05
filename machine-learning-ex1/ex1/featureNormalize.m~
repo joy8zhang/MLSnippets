@@ -26,11 +26,14 @@ sigma = zeros(1, size(X, 2));
 % Hint: You might find the 'mean' and 'std' functions useful.
 %       
    
-m = size(mu,2);
+featureMean = mean(X);
+featureScaling = X - featureMean;
+sD = std(X);
+X_norm = featureScaling/sD;
+m = size(X,1);
 for i = 1:m
     mu(1,i) = mean(X(:,i));
     sigma(1,i) = std(X(:,i));
-    X_norm(:,i) = (X(:,i)-mu(1,i))/sigma(1,i);
 
 % ============================================================
 
