@@ -96,10 +96,11 @@ figure;
 %plot(1:numel(J_history), J_history, '-b', 'LineWidth', 2);
 xlabel('Number of iterations');
 ylabel('Cost J');
-% plot(1:50, J1(1:50), 'b');
-% hold on;
-% plot(1:50, J2(1:50), 'r');
-% plot(1:50, J3(1:50), 'k');
+figure
+% % plot(1:50, J1(1:50), 'b');
+% % hold on;
+% % plot(1:50, J2(1:50), 'r');
+% % plot(1:50, J3(1:50), 'k');
 % Display gradient descent's result
 fprintf('Theta computed from gradient descent: \n');
 fprintf(' %f \n', theta);
@@ -109,8 +110,7 @@ fprintf('\n');
 % ====================== YOUR CODE HERE ======================
 % Recall that the first column of X is all-ones. Thus, it does
 % not need to be normalized.
-input = [1650 3];
-price = [1 (input-mu)./sigma]*theta; % You should change this
+price = 0; % You should change this
 
 
 % ============================================================
@@ -155,8 +155,7 @@ fprintf('\n');
 
 % Estimate the price of a 1650 sq-ft, 3 br house
 % ====================== YOUR CODE HERE ======================
-input = [1650 3];
-price = [1 1650 3]*theta; % You should change this
+price = 0; % You should change this
 
 
 % ============================================================
